@@ -2,20 +2,11 @@ import express, { Application, Request, Response } from "express"
 import * as path from 'path'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
-import HttpResponse from './utils/http'
+import { HttpResponse } from './utils/http'
 import cors from 'cors'
-
-import initAzureSqlServer from './db/index'
 
 import indexRouter from './routes/index'
 
-// Connect to DB
-try {
-  initAzureSqlServer()
-  console.log('[DB] Connection Success.')
-} catch(e) {
-  console.log('[DB] Error: ' + e.message)
-}
 
 // Init Express
 const app: Application = express()

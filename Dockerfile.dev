@@ -5,11 +5,8 @@ WORKDIR /usr/src/node-api
 COPY . .
 
 ENV NODE_ENV=production
-ENV NODE_APP_CORS_URL=https://questionnaire-fe.azurewebsites.net
-ENV NODE_APP_DB_USERNAME=1
-ENV NODE_APP_DB_PW=2
-ENV NODE_APP_DB_SERVER=3
-ENV NODE_APP_DB_DB=4
+ENV NODE_APP_CORS_URL=https://personal-portfolio.azurewebsites.net
+ENV NODE_APP_API_URL=https://ire1.blob.core.windows.net/personal-portfolio
 
 RUN npm install --production && npm run build:prod
 

@@ -1,11 +1,11 @@
 {
-  "name": "node-server-es5-webpack-template",
+  "name": "node-ts-proxy",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "babel-node ./dist/app.bundle.js",
     "dev": "npm-run-all --parallel build:dev watch",
-    "watch": "cross-env NODE_APP_DB_USERNAME=1 NODE_APP_DB_PW=2 NODE_APP_DB_SERVER=3 NODE_APP_DB_DB=4 NODE_APP_CORS_URL=http://localhost:3000 nodemon --exec babel-node ./dist/app.bundle.js",
+    "watch": "cross-env NODE_APP_API_URL=https://ire1.blob.core.windows.net/personal-portfolio NODE_APP_CORS_URL=http://localhost:3000 nodemon --exec babel-node ./dist/app.bundle.js",
     "build:dev": "webpack-cli --config webpack.config.cjs -w --progress --color",
     "build:prod": "webpack --config webpack.config.cjs --progress --color",
     "docker:dev": "bash ./docker-build-run.sh",
@@ -29,7 +29,6 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.6",
-    "tedious": "^11.0.1",
     "webpack-node-externals": "^2.5.2",
     "websocket": "^1.0.33",
     "ws": "^7.4.2",
