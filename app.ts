@@ -7,7 +7,6 @@ import cors from 'cors'
 
 import indexRouter from './routes/index'
 
-
 // Init Express
 const app: Application = express()
 

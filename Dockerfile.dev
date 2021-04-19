@@ -7,9 +7,10 @@ COPY . .
 ENV NODE_ENV=production
 ENV NODE_APP_CORS_URL=https://personal-portfolio.azurewebsites.net
 ENV NODE_APP_API_URL=https://ire1.blob.core.windows.net/personal-portfolio
+ENV PORT=8080
 
 RUN npm install --production && npm run build:prod
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD [ "npm", "start" ]

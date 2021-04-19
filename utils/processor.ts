@@ -19,7 +19,7 @@ export default class IncomingRequestProcessor {
   }
 
   private verifyRequestType(type: string | string[] | undefined): boolean {
-    return type === 'application/json'
+    return type !== undefined && type.includes('application/json')
   }
 
   public async init(incRequest: Request): Promise<HttpResponse> {
