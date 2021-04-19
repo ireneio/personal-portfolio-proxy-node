@@ -33,3 +33,13 @@ $ npm run docker:hub
 # build and push to ACR
 $ npm run azure
 ```
+
+## Request Body
+
+```json
+{
+  "endpoint": "/api",
+  "data": {},
+  "method": "get"
+}
+```
