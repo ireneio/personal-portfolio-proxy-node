@@ -1,4 +1,4 @@
-# node-ts-proxy
+# personal-portfolio-proxy
 
 ## Stack
 
